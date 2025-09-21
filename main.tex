@@ -3,13 +3,11 @@
 % ===== PACKAGES =====
 \usepackage[a4paper, margin=1.5cm]{geometry} % Set page margins
 \usepackage[T1]{fontenc}                     % Font encoding
-\usepackage{lmodern}                         % Use the Latin Modern font
+\usepackage[sfdefault]{FiraSans}             % Use the Fira Sans font for a modern look
 \usepackage[hidelinks]{hyperref}             % Clickable links (email, web)
 \usepackage{parskip}                         % Use spacing between paragraphs, not indents
-\usepackage{tabularx}                        % For better tables that fill the width
 \usepackage{titlesec}                        % For custom section headers
-\usepackage{fontawesome5}                    % For icons in the header
-\usepackage{enumitem}                        % For customizing lists (e.g., itemize)
+\usepackage{enumitem}                        % For customizing lists
 
 % ===== STYLING AND COMMANDS =====
 
@@ -22,7 +20,9 @@
   [\titlerule\vspace{-4pt}]      % Code after (the line)
 
 % Custom list environment for a tighter, cleaner look
-\setlist[itemize]{leftmargin=1.5em, topsep=0.2ex, itemsep=-0.5ex}
+\setlist[itemize]{leftmargin=1.5em, topsep=0.2ex, itemsep=-0.5ex, label=\textbullet}
+\setlist[description]{font=\normalfont\bfseries, style=multiline, leftmargin=3.2cm, labelsep=0.5em}
+
 
 % Remove page numbers
 \pagenumbering{gobble}
@@ -38,14 +38,10 @@
 % ===================================================================
 \begin{center}
     {\Huge \bfseries Dylan Neve}
-    \vspace{4pt}
-
-    \href{mailto:neved@tcd.ie}{\faEnvelope\ neved@tcd.ie} \quad | \quad
-    \faPhone\ +353 83 473 3284 \quad | \quad
-    \href{https://www.google.com/maps/place/Greystones,+Co.+Wicklow}{\faMapMarker\ Greystones, Co. Wicklow} \\
-    \href{https://github.com/dylanneve1}{\faGithub\ github.com/dylanneve1} \quad | \quad
-    \href{https://linkedin.com/in/dylan-neve}{\faLinkedin\ linkedin.com/in/dylan-neve} \quad | \quad
-    \href{https://g.dev/dylanneve1}{\faGoogle\ g.dev/dylanneve1}
+\end{center}
+\begin{center}
+    \href{mailto:neved@tcd.ie}{neved@tcd.ie} | +353 83 473 3284 | Greystones, Co. Wicklow \\
+    \href{https://github.com/dylanneve1}{github.com/dylanneve1} | \href{https://linkedin.com/in/dylan-neve}{linkedin.com/in/dylan-neve} | \href{https://g.dev/dylanneve1}{g.dev/dylanneve1}
 \end{center}
 
 
@@ -64,16 +60,16 @@ Fourth-year Computer Engineering student on the integrated BAI/MAI pathway at Tr
 \textit{Computer Engineering (BAI/MAI Integrated Pathway), Year 4}
 \begin{itemize}
     \item Year 3 Result: \textbf{First Class Honours (I), 75\%} (60 ECTS awarded).
-    \item \textbf{Selected 3rd Year Modules:} \\
-        \begin{tabularx}{\linewidth}{@{} X r @{}}
-            Concurrent Systems \& Operating Systems & \textbf{83\% (I)} \\
-            Microprocessor Systems & \textbf{81\% (I)} \\
-            Software Design Analysis & \textbf{85\% (I)} \\
-            Data Structures \& Algorithms & \textbf{82\% (I)} \\
-            Digital Circuits & \textbf{77\% (I)} \\
-            Digital Systems Design & \textbf{77\% (I)} \\
-            Probability \& Statistics & \textbf{72\% (I)} \\
-        \end{tabularx}
+    \item \textbf{Selected 3rd Year Modules:}
+    \begin{itemize}[label={}, leftmargin=1em]
+        \item Concurrent Systems \& Operating Systems \hfill \textbf{83\% (I)}
+        \item Microprocessor Systems \hfill \textbf{81\% (I)}
+        \item Software Design Analysis \hfill \textbf{85\% (I)}
+        \item Data Structures \& Algorithms \hfill \textbf{82\% (I)}
+        \item Digital Circuits \hfill \textbf{77\% (I)}
+        \item Digital Systems Design \hfill \textbf{77\% (I)}
+        \item Probability \& Statistics \hfill \textbf{72\% (I)}
+    \end{itemize}
     \item \textbf{Key 4th Year Modules:} Deep Learning \& Computer Vision.
 \end{itemize}
 
@@ -82,13 +78,13 @@ Fourth-year Computer Engineering student on the integrated BAI/MAI pathway at Tr
 %                           TECHNICAL SKILLS
 % ===================================================================
 \section*{Technical Skills}
-\begin{tabularx}{\textwidth}{@{} l >{\raggedright\arraybackslash}X @{}}
-    \textbf{Languages}      & C/C++, Python, Java, Verilog, ARM Assembly, Shell Scripting \\
-    \textbf{Core Concepts}  & Operating Systems, Digital Systems, Data Structures \& Algorithms, FSMs, Combinational \& Sequential Logic, Computer Networks, Interrupt Handling \\
-    \textbf{Tools \& Dev}   & Linux, Git, Gerrit, CMake, Docker, CI/CD (GitHub Actions), GDB, Valgrind, CLion, Vivado \\
-    \textbf{Platforms}      & Raspberry Pi, Raspberry Pi Pico, Arduino, FPGAs (Basys 3), Android (ADB), MATLAB, AutoCAD \\
-    \textbf{Libraries}      & OpenCV, OpenGL \\
-\end{tabularx}
+\begin{description}
+    \item[Languages] C/C++, Python, Java, Verilog, Assembly, Shell Scripting
+    \item[Core Concepts] Operating Systems, Digital Systems, Data Structures \& Algorithms, Computer Networking, FSMs, Combinational \& Sequential Logic, Interrupt Handling
+    \item[Tools \& Dev] Linux, Git, Gerrit, CMake, Docker, CI/CD (GitHub Actions), GDB, Valgrind, CLion, Vivado
+    \item[Platforms] Raspberry Pi, Raspberry Pi Pico, Arduino, FPGAs (Basys 3), Android (ADB), MATLAB, AutoCAD
+    \item[Libraries] OpenCV, OpenGL
+\end{description}
 
 
 % ===================================================================
@@ -98,7 +94,7 @@ Fourth-year Computer Engineering student on the integrated BAI/MAI pathway at Tr
 \textbf{ARM Assembly Programming on Raspberry Pi Pico} \hfill \textbf{2025} \\
 \textit{Technologies: Assembly, C, Raspberry Pi Pico SDK}
 \begin{itemize}
-    \item Developed low-level drivers in ARM assembly for a Morse code training game, interfacing with hardware timers and GPIO for button input.
+    \item Developed low-level drivers in assembly for a Morse code training game, interfacing with hardware timers and GPIO for button input.
     \item Implemented a robust interrupt service routine (ISR) to handle GPIO events, calculate button press durations, and classify inputs as dots or dashes.
     \item Created a circular buffer in assembly to manage Morse code elements, ensuring efficient data transfer between the ISR and the main C application logic.
 \end{itemize}
