@@ -1,0 +1,152 @@
+\documentclass[10pt,a4paper]{article}
+
+% ===== PACKAGES =====
+\usepackage[a4paper, margin=1.5cm]{geometry} % Set page margins
+\usepackage[T1]{fontenc}                     % Font encoding
+\usepackage{lmodern}                         % Use the Latin Modern font
+\usepackage[hidelinks]{hyperref}             % Clickable links (email, web)
+\usepackage{parskip}                         % Use spacing between paragraphs, not indents
+\usepackage{tabularx}                        % For better tables that fill the width
+\usepackage{titlesec}                        % For custom section headers
+\usepackage{fontawesome5}                    % For icons in the header
+\usepackage{enumitem}                        % For customizing lists (e.g., itemize)
+
+% ===== STYLING AND COMMANDS =====
+
+% Section header style: A solid line under the section title
+\titleformat{\section}
+  {\normalfont\Large\bfseries} % Format
+  {}                            % Label
+  {0em}                         % Separation
+  {}                            % Code before
+  [\titlerule\vspace{-4pt}]      % Code after (the line)
+
+% Custom list environment for a tighter, cleaner look
+\setlist[itemize]{leftmargin=1.5em, topsep=0.2ex, itemsep=-0.5ex}
+
+% Remove page numbers
+\pagenumbering{gobble}
+
+% Allow for more flexible spacing to prevent text from running into the margin
+\emergencystretch=2em
+
+% ===== DOCUMENT START =====
+\begin{document}
+
+% ===================================================================
+%                              HEADER
+% ===================================================================
+\begin{center}
+    {\Huge \bfseries Dylan Neve}
+    \vspace{4pt}
+
+    \href{mailto:dylanneve1@gmail.com}{\faEnvelope\ dylanneve1@gmail.com} \quad | \quad
+    \faPhone\ +353 83 473 3284 \quad | \quad
+    \href{https://www.google.com/maps/place/Greystones,+Co.+Wicklow}{\faMapMarker\ Greystones, Co. Wicklow} \\
+    \href{https://github.com/dylanneve1}{\faGithub\ github.com/dylanneve1} \quad | \quad
+    \href{https://linkedin.com/in/dylan-neve}{\faLinkedin\ linkedin.com/in/dylan-neve} \quad | \quad
+    \href{https://g.dev/dylanneve1}{\faGoogle\ g.dev/dylanneve1}
+\end{center}
+
+
+% ===================================================================
+%                              PROFILE
+% ===================================================================
+\section*{Profile}
+Fourth-year Computer Engineering student on the integrated BAI/MAI pathway at Trinity College Dublin. Achieved First Class Honours (75\%) in Year 3 with proven strengths in operating systems, microprocessor systems, digital design, and data structures. Currently focusing on \textit{Deep Learning \& Computer Vision} and seeking challenging software or systems engineering internships.
+
+
+% ===================================================================
+%                             EDUCATION
+% ===================================================================
+\section*{Education}
+\textbf{Trinity College Dublin} \hfill \textbf{2021--Present} \\
+\textit{Computer Engineering (BAI/MAI Integrated Pathway), Year 4}
+\begin{itemize}
+    \item Year 3 Result: \textbf{First Class Honours (I), 75\%} (60 ECTS awarded).
+    \item \textbf{Selected 3rd Year Modules:} \\
+        % Using tabularx with an 'X' column to fill space and push the grades to the far right
+        \begin{tabularx}{\linewidth}{@{} X r @{}}
+            Concurrent Systems \& Operating Systems & \textbf{83\% (I)} \\
+            Microprocessor Systems & \textbf{81\% (I)} \\
+            Software Design Analysis & \textbf{85\% (I)} \\
+            Data Structures \& Algorithms & \textbf{82\% (I)} \\
+            Digital Circuits & \textbf{77\% (I)} \\
+            Digital Systems Design & \textbf{77\% (I)} \\
+            Probability \& Statistics & \textbf{72\% (I)} \\
+        \end{tabularx}
+    \item \textbf{Key 4th Year Modules:} Deep Learning \& Computer Vision.
+\end{itemize}
+
+
+% ===================================================================
+%                           TECHNICAL SKILLS
+% ===================================================================
+\section*{Technical Skills}
+\begin{tabularx}{\textwidth}{@{} l >{\raggedright\arraybackslash}X @{}}
+    \textbf{Languages}      & C/C++, Python, Java, Shell Scripting \\
+    \textbf{Core Concepts}  & Operating Systems, Microprocessors, Digital Systems, Data Structures \& Algorithms, Computer Networks, Software Design Patterns \\
+    \textbf{Tools \& Dev}   & Linux, Git, Gerrit, CMake, Docker, CI/CD (GitHub Actions), GDB, Valgrind, CLion \\
+    \textbf{Platforms}      & Raspberry Pi, Arduino, Android (ADB), MATLAB, AutoCAD \\
+    \textbf{Libraries}      & OpenCV, OpenGL \\
+\end{tabularx}
+
+
+% ===================================================================
+%                         ACADEMIC PROJECTS
+% ===================================================================
+\section*{Academic Projects}
+\textbf{LunarBuggyPy --- Control \& Telemetry Stack (Group Project)} \hfill \textbf{2024--2025} \\
+\textit{Technologies: Python, UDP, OpenCV, Raspberry Pi, WireGuard,} \texttt{netem}
+\begin{itemize}
+    \item Designed a robust, two-part system (\texttt{buggyudp} and \texttt{controludp}) for remote vehicle operation over local and VPN-secured networks.
+    \item Implemented efficient, packetised command, video, and telemetry streams over UDP, incorporating network latency and impairment simulation.
+    \item Integrated OpenCV for real-time image processing and developed comprehensive bring-up scripts for simplified deployment.
+    \item Project Repository: \href{https://github.com/dylanneve1/lunarbuggypy}{github.com/dylanneve1/lunarbuggypy}
+\end{itemize}
+\medskip
+\textbf{Data Structures \& Algorithms Implementations} \hfill \textbf{2024} \\
+\textit{Technologies: C, Algorithm Analysis}
+\begin{itemize}
+    \item Implemented a comprehensive library of fundamental data structures including linked lists, stacks, queues, trees, graphs, and hash tables.
+    \item Developed and analysed core sorting, searching, and graph traversal algorithms, documenting complexity trade-offs for each implementation.
+\end{itemize}
+
+
+% ===================================================================
+%                             EXPERIENCE
+% ===================================================================
+\section*{Experience}
+\textbf{IT Technician Intern} --- John Sisk \& Sons, Citywest \hfill \textbf{Jun--Aug 2024}
+\begin{itemize}
+    \item Administered Active Directory users and groups, and deployed laptops at scale using a standardised imaging process, enhancing deployment efficiency.
+    \item Resolved over \textbf{400} hardware and software support tickets within strict SLAs, improving the first-time fix rate by developing clearer triage documentation.
+\end{itemize}
+\medskip
+\textbf{Kitchen \& Care Assistant} --- Greystones Nursing Home \hfill \textbf{May 2022--May 2023}
+\begin{itemize}
+    \item Collaborated with nursing staff to manage resident mealtimes, including order taking, food preparation, service, and adherence to hygiene standards.
+\end{itemize}
+\medskip
+\textbf{IT Support Intern} --- DermView Ltd., Carrickmines \hfill \textbf{Jun 2020}
+\begin{itemize}
+    \item Configured and deployed clinical devices with Mobile Device Management (MDM) software and standardised the build process to reduce setup time and variability.
+\end{itemize}
+
+
+% ===================================================================
+%                    ACHIEVEMENTS & INTERESTS
+% ===================================================================
+\section*{Achievements \& Interests}
+\begin{itemize}
+    \item \textbf{Open Source Contribution:} Maintained device trees for PixelExperience (Android 10--14) on Exynos9810, performing kernel backports and implementing runtime resolution switching.
+    \item \textbf{Workshops \& Courses:} Completed Google Algorithms Workshop (2024); Former participant in CTYI (Top 5\% in SCAT), studying Computer Science and Medicine.
+\end{itemize}
+
+\vfill
+\begin{center}
+    \small Last updated: September 2025
+\end{center}
+
+\end{document}
+
