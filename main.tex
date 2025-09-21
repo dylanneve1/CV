@@ -83,10 +83,10 @@ Fourth-year Computer Engineering student on the integrated BAI/MAI pathway at Tr
 % ===================================================================
 \section*{Technical Skills}
 \begin{tabularx}{\textwidth}{@{} l >{\raggedright\arraybackslash}X @{}}
-    \textbf{Languages}      & C/C++, Python, Java, Verilog, Shell Scripting \\
-    \textbf{Core Concepts}  & Operating Systems, Digital Systems, Data Structures \& Algorithms, FSMs, Combinational \& Sequential Logic, Computer Networks \\
+    \textbf{Languages}      & C/C++, Python, Java, Verilog, ARM Assembly, Shell Scripting \\
+    \textbf{Core Concepts}  & Operating Systems, Digital Systems, Data Structures \& Algorithms, FSMs, Combinational \& Sequential Logic, Computer Networks, Interrupt Handling \\
     \textbf{Tools \& Dev}   & Linux, Git, Gerrit, CMake, Docker, CI/CD (GitHub Actions), GDB, Valgrind, CLion, Vivado \\
-    \textbf{Platforms}      & Raspberry Pi, Arduino, FPGAs (Basys 3), Android (ADB), MATLAB, AutoCAD \\
+    \textbf{Platforms}      & Raspberry Pi, Raspberry Pi Pico, Arduino, FPGAs (Basys 3), Android (ADB), MATLAB, AutoCAD \\
     \textbf{Libraries}      & OpenCV, OpenGL \\
 \end{tabularx}
 
@@ -95,15 +95,23 @@ Fourth-year Computer Engineering student on the integrated BAI/MAI pathway at Tr
 %                         ACADEMIC PROJECTS
 % ===================================================================
 \section*{Academic Projects}
+\textbf{ARM Assembly Programming on Raspberry Pi Pico} \hfill \textbf{2025} \\
+\textit{Technologies: Assembly, C, Raspberry Pi Pico SDK}
+\begin{itemize}
+    \item Developed low-level drivers in ARM assembly for a Morse code training game, interfacing with hardware timers and GPIO for button input.
+    \item Implemented a robust interrupt service routine (ISR) to handle GPIO events, calculate button press durations, and classify inputs as dots or dashes.
+    \item Created a circular buffer in assembly to manage Morse code elements, ensuring efficient data transfer between the ISR and the main C application logic.
+\end{itemize}
+\medskip
 \textbf{Digital Logic System Design on FPGA} \hfill \textbf{2025} \\
 \textit{Technologies: Verilog, Vivado, Basys 3 FPGA, XDC}
 \begin{itemize}
     \item Designed, implemented, and verified multiple digital systems, including a 6-bit ALU, a 20-bit LFSR, and a Moore FSM for codeword detection.
     \item Managed the complete FPGA workflow: creating modular designs in Verilog, validating with testbenches in Vivado, and deploying to a Basys 3 board.
-    \item Mapped system inputs and outputs to physical board peripherals (switches, LEDs, 7-segment display) using Xilinx Design Constraints (XDC).
+    \item Mapped system I/O to physical board peripherals (switches, LEDs, 7-segment display) using Xilinx Design Constraints (XDC).
 \end{itemize}
 \medskip
-\textbf{LunarBuggyPy --- Control \& Telemetry Stack (Group Project)} \hfill \textbf{2024--2025} \\
+\textbf{LunarBuggyPy --- Control \& Telemetry Stack (Group Project)} \hfill \textbf{2025} \\
 \textit{Technologies: Python, UDP, OpenCV, Raspberry Pi, WireGuard,} \texttt{netem}
 \begin{itemize}
     \item Designed a robust, two-part system (\texttt{buggyudp} and \texttt{controludp}) for remote vehicle operation over local and VPN-secured networks.
